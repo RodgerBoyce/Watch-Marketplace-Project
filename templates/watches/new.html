@@ -12,17 +12,17 @@
                 {% endfor %}
             </select>
             <label for="model">Model: </label>
-            <input type="text" placeholder="Enter Model" maxlength="20" id="model" name="model" required
+            <input type="text" placeholder="Enter Model" maxlength="100" id="model" name="model" required
             onfocus="this.placeholder = ''"
             onblur="this.placeholder = 'Enter watch model'">
 
-            <label for="price">Price: </label>
-            <input type="text" placeholder="Enter Price" maxlength="30" id="price" name="price" required
+            <label for="price">Price: £ </label>
+            <input type="int" placeholder="Enter Price" maxlength="7" id="price" name="price" required
             onfocus="this.placeholder = ''"
             onblur="this.placeholder = 'Enter price'">
 
             <label for="image">Image: </label>
-            <input type="text" placeholder="Enter Image File Name" maxlength="30" id="image" name="image" required
+            <input type="text" placeholder="Enter Image File Name" maxlength="250" id="image" name="image" required
             onfocus="this.placeholder = ''"
             onblur="this.placeholder = 'Enter image file name'">
 

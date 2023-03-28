@@ -1,5 +1,5 @@
 header {
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%), url(https://img.freepik.com/premium-photo/abstaract-3d-rendering-illustration-watches-with-gears-sketch-looking-outline-lines_363039-260.jpg?w=1480);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%), url(https://img.freepik.com/premium-photo/abstaract-3d-rendering-illustration-watches-with-gears-sketch-looking-outline-lines_363039-260.jpg?w=1480);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -7,10 +7,10 @@ header {
     left: 0;
     padding: 10px;
     text-align: center;
-    color: #343434;
+    color: rgb(136, 115, 52);
     position: fixed;
     z-index: 1;
-    font-size: large;
+    font-size: medium;
 }
 
 body, html {
@@ -21,26 +21,30 @@ body, html {
 body {
     background: linear-gradient(to bottom, #ffffff, #ffffff);
     background-repeat: no-repeat;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 150px; 
+    font-family:'Courier New', Courier, monospace;
+    padding-top: 170px; 
     margin: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .menu {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding-bottom: 10px;
-    text-decoration: none;
     color: #ffffff;
     font-weight: bold;
+    width: 100%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: rgb(192, 167, 94);
 }
 
 .dropdown {
@@ -53,8 +57,9 @@ nav {
     top: 100%;
     left: 0;
     z-index: 1;
-    background-color: #1f1f1f;
+    background-color: #3c3c3c;
     box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    border-radius: 7px;
 }
 
 .dropdown-content a {
@@ -70,6 +75,7 @@ nav {
 
 ul > li{
     list-style: none;
+    text-align: center;
 }
 
 .container{
@@ -79,21 +85,34 @@ ul > li{
 }
 
 .container > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    padding: 0;
+}
+
+.container > ul > li {
     background: #FFFFFF;
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
+    margin: 10px;
+    padding: 20px; 
+    width: 25%;   
 }
 
 .container ul > li > a{
     font-size: medium;
-    font-weight: bold;
     color: #222222;
 }
 
 .container ul > li > a:visited{
     font-size: medium;
-    font-weight: bold;
     color: #222222;
+}
+
+.container a{
+    text-decoration: none;
+    justify-content: center;
 }
 
 .dashboard_content{
@@ -108,3 +127,26 @@ ul > li{
     font-size: large;
 }
 
+img.brand {
+    max-width: 50%;
+}
+
+img.watch_list {
+    max-width: 80%;
+}
+
+img.selected_watch{
+    max-width: 40%;
+}
+
+img.brand_watches{
+    max-width: 40%;
+}
+
+img.brand_page{
+    max-width: 10%;
+}
+
+.brand_header {
+    text-align: center;
+}

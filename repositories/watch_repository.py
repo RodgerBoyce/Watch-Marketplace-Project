@@ -40,5 +40,5 @@ def delete(id):
 
 def update(watch):
     sql = "UPDATE watches SET (brand_id, model, price, image) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [watch.brand, watch.model, watch.price, watch.image]
-    results = run_sql(sql, values)
+    values = [watch.brand.id, watch.model, watch.price, watch.image, watch.id]
+    run_sql(sql, values)

@@ -2,16 +2,16 @@
 {% block content %}
 
 <div class = "watch_list">
-    <ul>
-        <li>{{brand.name}}</li>
-        <li><img src="{{brand.image}}" alt="{{brand.name}}"
-        ></li>
-    </ul>
-    {% for watch in watches if watch.brand.id == brand.id%}
-    <ul>
-        <li><a href="/watches/{{ watch.id }}">{{ watch.model }}<br>£{{ watch.price }}</a></li>
-    </ul>
-{% endfor %}
+    <div class="brand_header">
+        <img class = "brand_page" src="{{brand.image}}" alt="{{brand.name}}">
+    </div>
+    <div class="container">
+        <ul>
+        {% for watch in watches if watch.brand.id == brand.id%}
+            <li><a href="/watches/{{ watch.id }}">{{ watch.model }}<br>£{{ watch.price }}<img class="watch_list" src="{{watch.image}}" alt="{{watch.name}}"></a></li>
+        {% endfor %}
+        </ul>
+    </div>
 </div>
 
 {% endblock content %}

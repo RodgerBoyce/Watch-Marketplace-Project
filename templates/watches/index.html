@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+    <ul>
         {% for watch in all_watches %}
-            <ul>
-                <li><a href="/watches/{{ watch.id }}">{{ watch.brand.name}} <br>{{watch.model}} <br>Listing Price: £{{watch.price}} <br>{{ watch.image }}</a></li>
-            </ul>
-        {% endfor %}
+                <li><a href="/watches/{{ watch.id }}">{{ watch.brand.name}} <br>{{watch.model}} <br>£{{watch.price}} <br><img class="watch_list" src="{{watch.image}}" alt="{{watch.image}}"></a></li>
+                {% endfor %}
+    </ul>
         
 {% endblock content %}
 

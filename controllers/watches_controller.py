@@ -43,3 +43,13 @@ def edit_watch_page(id):
     watch = watch_repository.select(id)
     return render_template('watches/edit.html', watch=watch)
 
+@watches_blueprint.route('/watches/<id>', methods=['POST'])
+def update_watch(id):
+    brand_id = request.form['brand_id']
+    brand = brand_repository.select(brand_id)
+    model = request.form['model']
+    price = request.form['price']
+    image = request.form['image']
+    watch = Watch(brand, model, price, image, id)
+    watch_repository.update(watch)
+    return redirect(f'/watches/{id}')

@@ -6,10 +6,12 @@
         <li>Brand: <a href="/brands/{{ watch.brand.id }}">{{watch.brand.name}}</a></li>
         <li>Model: {{watch.model}}</li>
         <li>Price: £{{watch.price}}</li>
-        <!-- <li>Image: {{watch.image}}</li> -->
-        <li><img src="{{watch.image}}" alt="{{watch.image}}"
+        <li><img class = "selected_watch" src="{{watch.image}}" alt="{{watch.image}}"></li>
         <form class="delete-form" action="/watches/{{watch.id}}/delete" method="POST">
         <input type="submit" value="Delete Watch">
+        </form>
+        <form class="edit-form" action="/watches/{{watch.id}}/edit" method="GET">
+        <input type="submit" value="Edit Watch">
         </form>
     </div>
 </ul>
