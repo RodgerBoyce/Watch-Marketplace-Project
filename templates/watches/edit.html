@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div>
+    <div class="watch_form">
         <form action="/watches/{{watch.id}}" method="POST">
         
             <input type="hidden" name="brand_id" value="{{watch.brand.id}}">

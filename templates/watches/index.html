@@ -2,8 +2,8 @@
 {% block content %}
     <ul>
         {% for watch in all_watches %}
-                <li><a href="/watches/{{ watch.id }}">{{ watch.brand.name}} <br>{{watch.model}} <br>£{{watch.price}} <br><img class="watch_list" src="{{watch.image}}" alt="{{watch.image}}"></a></li>
-                {% endfor %}
+            <li><a href="/watches/{{ watch.id }}">{{ watch.brand.name}} <br>{{watch.model}} <br>£{{watch.price}} <br><img class="watch_list" src="{{watch.image}}" alt="{{watch.image}}"></a></li>
+        {% endfor %}
     </ul>
         
 {% endblock content %}

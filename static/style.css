@@ -5,7 +5,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     color: rgb(136, 115, 52);
     position: fixed;
@@ -26,12 +26,19 @@ body {
     margin: 0;
 }
 
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: xx-large;
+}
+
 .menu {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
     margin: 0;
+    padding: 15px;
     padding-bottom: 10px;
     color: #ffffff;
     font-weight: bold;
@@ -97,7 +104,8 @@ ul > li{
     border-radius: 10px;
     margin: 10px;
     padding: 20px; 
-    width: 25%;   
+    width: 25%; 
+    justify-content: center;  
 }
 
 .container ul > li > a{
@@ -131,6 +139,11 @@ img.brand {
     max-width: 50%;
 }
 
+.brand:hover {
+    transform: scale(1.3);
+    transition: transform 0.5s ease-out;
+}
+
 img.watch_list {
     max-width: 80%;
 }
@@ -140,7 +153,7 @@ img.selected_watch{
 }
 
 img.brand_watches{
-    max-width: 40%;
+    max-width: 80%;
 }
 
 img.brand_page{
@@ -150,3 +163,40 @@ img.brand_page{
 .brand_header {
     text-align: center;
 }
+
+.watch_form{
+    display:flex;
+    padding: 100px;
+    justify-content: center;
+}
+
+.watch_list:hover {
+    animation-name: bounce;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+  }
+    @keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+
+  .brand_watches:hover {
+    animation-name: bounce;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+  }
+    @keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+  
+.selected_watch:hover:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease-out;
+  }

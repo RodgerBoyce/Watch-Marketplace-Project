@@ -8,7 +8,7 @@
     <div class="container">
         <ul>
         {% for watch in watches if watch.brand.id == brand.id%}
-            <li><a href="/watches/{{ watch.id }}">{{ watch.model }}<br>£{{ watch.price }}<img class="watch_list" src="{{watch.image}}" alt="{{watch.name}}"></a></li>
+            <li><a href="/watches/{{ watch.id }}">{{ watch.model }}<br>£{{ watch.price }}<img class="brand_watches" src="{{watch.image}}" alt="{{watch.name}}"></a></li>
         {% endfor %}
         </ul>
     </div>
