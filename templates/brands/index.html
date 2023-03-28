@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for brand in all_brands %}
+    <ul>
+        <li><a href="/brands/{{ brand.id }}">{{ brand.name }}<br><img src="{{brand.image}}" alt="{{brand.name}}"</a>
+        </li>
+    </ul>
+    
+{% endfor %}
+    
+{% endblock content %}

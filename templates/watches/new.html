@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <form action="/watches" method="POST">
+            <label for="brand_id">Brand:</label>
+            <select name="brand_id" id="brand_id">
+                <option value = ' '></option>
+                {% for brand in brand_list %}
+                <option value="{{ brand.id }}">
+                    {{ brand.name }}
+                </option>
+                {% endfor %}
+            </select>
+            <label for="model">Model: </label>
+            <input type="text" placeholder="Enter Model" maxlength="20" id="model" name="model" required
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Enter watch model'">
+
+            <label for="price">Price: </label>
+            <input type="text" placeholder="Enter Price" maxlength="30" id="price" name="price" required
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Enter price'">
+
+            <label for="image">Image: </label>
+            <input type="text" placeholder="Enter Image File Name" maxlength="30" id="image" name="image" required
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Enter image file name'">
+
+            <input type="submit" value="Add new watch">
+    </form>
+</div>
+{% endblock content %}

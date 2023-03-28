@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Your Watch Marketplace</title>
+</head>
+<body>
+    <header>
+        <h1>Your Watch Marketplace</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">DASHBOARD</a></li>
+                <li><a href="/watches">ALL WATCHES</a></li>
+                <li><a href="/brands">ALL BRANDS</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">ADD NEW</a>
+                    <div class="dropdown-content">
+                        <a href="/watches/new">ADD NEW WATCH</a>
+                    </div>
+                </li>
+            </ul>
+         </nav>
+    </header>
+    <div class="container">
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class = "watch_list">
+    <ul>
+        <li>{{brand.name}}</li>
+        <li><img src="{{brand.image}}" alt="{{brand.name}}"
+        ></li>
+    </ul>
+    {% for watch in watches if watch.brand.id == brand.id%}
+    <ul>
+        <li><a href="/watches/{{ watch.id }}">{{ watch.model }}<br>£{{ watch.price }}</a></li>
+    </ul>
+{% endfor %}
+</div>
+
+{% endblock content %}
