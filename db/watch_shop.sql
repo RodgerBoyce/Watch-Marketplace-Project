@@ -12,7 +12,8 @@ CREATE TABLE watches (
     brand_id INT NOT NULL REFERENCES brands(id) ON DELETE CASCADE,
     model VARCHAR(255),
     price INT,
-    image VARCHAR(255)   
+    image VARCHAR(255),  
+    sold BOOLEAN 
 );
 
 
@@ -34,11 +35,11 @@ INSERT INTO brands (name, image) VALUES ('Zenith', 'https://www.watches-of-switz
 INSERT INTO brands (name, image) VALUES ('miscellaneous', 'https://cdn.shopify.com/s/files/1/0072/3104/5683/files/miscellaneous_logotype_3137x.png?v=1613526599');
 
 
-INSERT INTO watches (brand_id, model, price, image) VALUES (3, 'Tank', 10000, 'https://content.thewosgroup.com/productimage/17311221/17311221_1.jpg?impolicy=zoom');
-INSERT INTO watches (brand_id, model, price, image) VALUES (5, 'Legend Diver', 2000, 'https://content.thewosgroup.com/productimage/17351077/17351077_1.jpg?impolicy=zoom');
-INSERT INTO watches (brand_id, model, price, image) VALUES (7, 'Seamaster Diver 300', 5500, 'https://content.thewosgroup.com/productimage/17331437/17331437_1.jpg?impolicy=zoom');
-INSERT INTO watches (brand_id, model, price, image) VALUES (7, 'Speedmaster', 6000, 'https://content.thewosgroup.com/productimage/17331767/17331767_1.jpg?impolicy=zoom');
-INSERT INTO watches (brand_id, model, price, image) VALUES (9, 'Day Date', 35000, 'https://content.thewosgroup.com/productimage/17305152/17305152_1.png?impolicy=lister-rolex');
-INSERT INTO watches (brand_id, model, price, image) VALUES (9, 'Explorer', 6000, 'https://content.thewosgroup.com/productimage/17305081/17305081_1.png?impolicy=lister-rolex');
-INSERT INTO watches (brand_id, model, price, image) VALUES (9, 'Submariner', 8000, 'https://content.thewosgroup.com/productimage/17304427/17304427_1.png?impolicy=lister-rolex');
+INSERT INTO watches (brand_id, model, price, image, sold) VALUES (3, 'Tank', 10000, 'https://content.thewosgroup.com/productimage/17311221/17311221_1.jpg?impolicy=zoom', False);
+INSERT INTO watches (brand_id, model, price, image, sold) VALUES (5, 'Legend Diver', 2000, 'https://content.thewosgroup.com/productimage/17351077/17351077_1.jpg?impolicy=zoom', False);
+INSERT INTO watches (brand_id, model, price, image, sold) VALUES (7, 'Seamaster Diver 300', 5500, 'https://content.thewosgroup.com/productimage/17331437/17331437_1.jpg?impolicy=zoom', False);
+INSERT INTO watches (brand_id, model, price, image, sold) VALUES (7, 'Speedmaster', 6000, 'https://content.thewosgroup.com/productimage/17331767/17331767_1.jpg?impolicy=zoom', False);
+INSERT INTO watches (brand_id, model, price, image, sold) VALUES (9, 'Day Date', 35000, 'https://content.thewosgroup.com/productimage/17305152/17305152_1.png?impolicy=lister-rolex', False);
+INSERT INTO watches (brand_id, model, price, image, sold) VALUES (9, 'Explorer', 6000, 'https://content.thewosgroup.com/productimage/17305081/17305081_1.png?impolicy=lister-rolex', False);
+INSERT INTO watches (brand_id, model, price, image, sold) VALUES (9, 'Submariner', 8000, 'https://content.thewosgroup.com/productimage/17304427/17304427_1.png?impolicy=lister-rolex', False);
 

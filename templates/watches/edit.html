@@ -17,7 +17,19 @@
             <input type="text" placeholder="Update Image File Name" maxlength="200" id="image" name="image" required
             value="{{watch.image}}">
 
-            <input type="submit" value="Update watch">
+            <label for="sold">Sold </label>
+            <select id="sold" name="sold">
+                <option value="False"
+                {% if watch.sold == False %} selected="selected" {% endif %}>
+                Available
+                </option>
+                <option value="True"
+                {% if watch.sold == True %} selected="selected" {% endif %}>
+                Sold
+                </option>
+            </select>
+
+            <input type="submit" value="Update watch" class="button">
     </form>
 </div>
 {% endblock content %}

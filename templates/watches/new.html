@@ -11,22 +11,22 @@
                 </option>
                 {% endfor %}
             </select>
-            <label for="model">Model: </label>
+            <br><br><label for="model">Model: </label>
             <input type="text" placeholder="Enter Model" maxlength="100" id="model" name="model" required
             onfocus="this.placeholder = ''"
             onblur="this.placeholder = 'Enter watch model'">
 
-            <label for="price">Price: £ </label>
+            <br><br><label for="price">Price: £ </label>
             <input type="int" placeholder="Enter Price" maxlength="7" id="price" name="price" required
             onfocus="this.placeholder = ''"
             onblur="this.placeholder = 'Enter price'">
 
-            <label for="image">Image: </label>
-            <input type="text" placeholder="Enter Image File Name" maxlength="250" id="image" name="image" required
+            <br><br><label for="image">Image: </label>
+            <br><input type="text" placeholder="Enter Image File Name" maxlength="200" id="image" name="image" required
             onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Enter image file name'">
+            onblur="this.placeholder = 'Enter image URL'">
 
-            <input type="submit" value="Add new watch">
+            <br><br><input type="submit" value="Add new watch" class="button">
     </form>
 </div>
 {% endblock content %}

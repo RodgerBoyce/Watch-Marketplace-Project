@@ -3,15 +3,21 @@
 
 <ul>
     <div class="watch_details">
-        <li>Brand: <a href="/brands/{{ watch.brand.id }}">{{watch.brand.name}}</a></li>
-        <li>Model: {{watch.model}}</li>
-        <li>Price: £{{watch.price}}</li>
-        <li><img class = "selected_watch" src="{{watch.image}}" alt="{{watch.image}}"></li>
-        <form class="delete-form" action="/watches/{{watch.id}}/delete" method="POST">
-        <input type="submit" value="Delete Watch">
+        <div class="brand_name"><li><a href="/brands/{{ watch.brand.id }}">{{watch.brand.name}}</div></a></li>
+        <br><li>{{watch.model}}</li>
+        <br><li>Price: £{{watch.price}}</li>
+        <br><li>{% if watch.sold %}
+            <div class="sold">Sold</div>
+            {% else %}
+            <div class="available">Available</div>
+            {% endif %}
+        </li>
+        <br><li><img class = "selected_watch" src="{{watch.image}}" alt="{{watch.image}}"></li>
+        <br><form class="edit-form" action="/watches/{{watch.id}}/edit" method="GET">
+        <input type="submit" value="Edit Watch" class="button">
         </form>
-        <form class="edit-form" action="/watches/{{watch.id}}/edit" method="GET">
-        <input type="submit" value="Edit Watch">
+        <br><form class="delete-form" action="/watches/{{watch.id}}/delete" method="POST">
+        <input type="submit" value="Delete Watch" class="button">
         </form>
     </div>
 </ul>

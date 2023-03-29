@@ -123,16 +123,19 @@ ul > li{
     justify-content: center;
 }
 
-.dashboard_content{
-    display: flex;
-    justify-content: center;
-}
-
 .watch_details{
     padding: 10px;
     list-style: none;
     text-align: center;
     font-size: large;
+    color: black;
+}
+.watch_details:visited {
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+    font-size: large;
+    color: black;
 }
 
 img.brand {
@@ -140,7 +143,7 @@ img.brand {
 }
 
 .brand:hover {
-    transform: scale(1.3);
+    transform: scale(1.25);
     transition: transform 0.5s ease-out;
 }
 
@@ -183,20 +186,75 @@ img.brand_page{
     100% { transform: translateY(0); }
   }
 
-.brand_watches:hover {
-    animation-name: bounce;
-    animation-duration: 0.8s;
-    animation-timing-function: ease-out;
-  }
-    @keyframes bounce {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
-  }
-  
-.selected_watch:hover:hover {
-    transform: scale(1.5);
+.selected_watch:hover {
+    transform: scale(1.05);
     transition: transform 0.5s ease-out;
+}
+
+.sold{
+    font-weight: bold;
+    color:#9b0000;
+}
+
+.available{
+    font-weight: bold;
+    color:#3e6f3f;
+}
+
+.brand_name{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+
+.brand_name:visited{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+
+.button {
+    background-color: rgb(192, 167, 94);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 300px;
+    height: 30px;
+}
+
+.button:hover {
+    background-color: #3c3c3c;
+    color: rgb(192, 167, 94);
+}
+
+.dashboard_content div {
+    border-style: double;
+    color: #222222;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.dashboard_content > ul > li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+    border-style: double;
+    color: rgb(192, 167, 94);
+    border-radius: 10px;
+}
+
+.non-padded-ul {
+    padding: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

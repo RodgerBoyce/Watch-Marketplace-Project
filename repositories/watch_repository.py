@@ -5,8 +5,8 @@ import repositories.brand_repository as brand_repository
 
 
 def save(watch):
-    sql = "INSERT INTO watches (brand_id, model, price, image) VALUES (%s, %s, %s, %s) RETURNING *"
-    values = [watch.brand, watch.model, watch.price, watch.image]
+    sql = "INSERT INTO watches (brand_id, model, price, image, sold) VALUES (%s, %s, %s, %s, %s) RETURNING *"
+    values = [watch.brand, watch.model, watch.price, watch.image, watch.sold]
     results = run_sql(sql, values)
     id = results[0]['id']
     watch.id = id
@@ -18,7 +18,7 @@ def select_all():
     results= run_sql(sql)
     for row in results:
         brand = brand_repository.select(row['brand_id'])
-        watch = Watch(brand, row['model'], row['price'], row['image'], row['id'])
+        watch = Watch(brand, row['model'], row['price'], row['image'], row['sold'], row['id'])
         watches.append(watch)
     return watches
 
@@ -30,7 +30,7 @@ def select(id):
     if results:
         result = results[0]
         brand = brand_repository.select(result['brand_id'])
-        watch = Watch(brand, result['model'], result['price'], result['image'], result['id'])
+        watch = Watch(brand, result['model'], result['price'], result['image'], result['sold'], result['id'])
     return watch
 
 def delete(id):
@@ -39,6 +39,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(watch):
-    sql = "UPDATE watches SET (brand_id, model, price, image) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [watch.brand.id, watch.model, watch.price, watch.image, watch.id]
+    sql = "UPDATE watches SET (brand_id, model, price, image, sold) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [watch.brand.id, watch.model, watch.price, watch.image, watch.sold, watch.id]
     run_sql(sql, values)

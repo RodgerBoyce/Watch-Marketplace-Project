@@ -3,6 +3,7 @@ from repositories import watch_repository
 from repositories import brand_repository
 from models.brand import Brand
 from models.watch import Watch
+import pdb
 
 from flask import Blueprint
 
@@ -50,6 +51,7 @@ def update_watch(id):
     model = request.form['model']
     price = request.form['price']
     image = request.form['image']
-    watch = Watch(brand, model, price, image, id)
+    sold = request.form['sold']
+    watch = Watch(brand, model, price, image, sold, id)
     watch_repository.update(watch)
     return redirect(f'/watches/{id}')
