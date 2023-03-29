@@ -183,7 +183,7 @@ img.brand_page{
     100% { transform: translateY(0); }
   }
 
-  .brand_watches:hover {
+.brand_watches:hover {
     animation-name: bounce;
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
@@ -199,4 +199,4 @@ img.brand_page{
 .selected_watch:hover:hover {
     transform: scale(1.5);
     transition: transform 0.5s ease-out;
-  }
+}
