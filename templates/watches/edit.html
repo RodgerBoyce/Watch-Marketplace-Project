@@ -5,19 +5,19 @@
         
             <input type="hidden" name="brand_id" value="{{watch.brand.id}}">
 
-            <label for="model">Model: </label>
+            <br><br><label for="model">Model: </label>
             <input type="text" placeholder="Update Model" maxlength="50" id="model" name="model" required
             value="{{watch.model}}">
 
-            <label for="price">Price: </label>
+            <br><br><label for="price">Price: </label>
             <input type="int" placeholder="Update Price" maxlength="6" id="price" name="price" required
             value="{{watch.price}}">
 
-            <label for="image">Image: </label>
+            <br><br><label for="image">Image: </label>
             <input type="text" placeholder="Update Image File Name" maxlength="200" id="image" name="image" required
             value="{{watch.image}}">
 
-            <label for="sold">Sold </label>
+            <br><br><label for="sold">Sold </label>
             <select id="sold" name="sold">
                 <option value="False"
                 {% if watch.sold == False %} selected="selected" {% endif %}>
@@ -29,7 +29,7 @@
                 </option>
             </select>
 
-            <input type="submit" value="Update watch" class="button">
+            <br><br><input type="submit" value="Update watch" class="button">
     </form>
 </div>
 {% endblock content %}
