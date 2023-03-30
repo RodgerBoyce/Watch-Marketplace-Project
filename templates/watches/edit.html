@@ -14,10 +14,10 @@
             value="{{watch.price}}">
 
             <br><br><label for="image">Image: </label>
-            <input type="text" placeholder="Update Image File Name" maxlength="200" id="image" name="image" required
+            <input type="text" placeholder="Update Image URL" maxlength="200" id="image" name="image" required
             value="{{watch.image}}">
 
-            <br><br><label for="sold">Sold </label>
+            <br><br><label for="sold">Sold: </label>
             <select id="sold" name="sold">
                 <option value="False"
                 {% if watch.sold == False %} selected="selected" {% endif %}>

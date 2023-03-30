@@ -1,6 +1,6 @@
 header {
     background-image: linear-gradient(to bottom, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%), url(https://img.freepik.com/premium-photo/abstaract-3d-rendering-illustration-watches-with-gears-sketch-looking-outline-lines_363039-260.jpg?w=1480);
-    background-size: cover;
+    background-size:50%;
     background-position: center;
     width: 100%;
     top: 0;
@@ -30,6 +30,12 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-size: xx-large;
+    font-weight: normal;
+}
+
+h2{
+    font-weight: normal;
+    font-size: x-large;
 }
 
 .menu {
@@ -39,17 +45,18 @@ h1{
     list-style: none;
     padding: 10px;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .menu a {
     text-decoration: none;
     color: black;
-    font-size: large;
+    font-size:large;
 }
 
 .menu a:hover {
     color: rgb(192, 167, 94);
+    font-weight: bold;
 }
 
 .dropdown {
@@ -83,12 +90,6 @@ ul > li{
     text-align: center;
 }
 
-/* .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-} */
-
 .container > ul {
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +100,7 @@ ul > li{
 .container > ul > li {
     background: #FFFFFF;
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.16);
+    /* box-shadow: 0px 0px 10px rgb(184, 172, 139); */
     border-radius: 10px;
     margin: 10px;
     padding: 20px; 
@@ -218,14 +220,13 @@ img.brand_page{
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
-    width: 300px;
-    height: 30px;
+    width: 250px;
 }
 
 .button:hover {
@@ -250,9 +251,10 @@ img.brand_page{
     align-items: center;
     padding: 5%;
     border-style: double;
-    color: rgb(192, 167, 94);
+    border-color: rgb(192, 167, 94);
+    color: #222222;
     border-radius: 10px;
-    font-weight: bold;
+    /* font-weight:bold; */
     font-size: larger;
 }
 
