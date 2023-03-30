@@ -1,3 +1,4 @@
+
 def total_sales(all_watches):
     total_sale_amount = 0
     for watch in all_watches:
